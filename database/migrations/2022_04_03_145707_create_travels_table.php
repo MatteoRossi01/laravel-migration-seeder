@@ -16,6 +16,7 @@ class CreateTravelsTable extends Migration
         Schema::create('travels', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 150);
+            $table->float('price', 8, 2);
             $table->string('destination', 80);
             $table->text('description')->nullable();
             $table->unsignedTinyInteger('number_person');
